@@ -1,0 +1,30 @@
+{% extends 'maringo_site/index.html' %}
+{% block content %}
+
+<table class="table">
+   <thead>
+        <tr>
+            <th>ID</th>
+            {% for form_field in form %}
+            <th>{{ form_field.label_tag|slice:"0:-1"|title }}</th>
+            {% endfor %}
+        </tr>
+   </thead>
+   <tbody>
+    {% for name in names %}
+    
+        <tr>
+            <th>{{name.id}}</th>
+            <td>{{ name.first_name|title }}</td>
+            <td>{{ name.last_name|title }}</th>
+            <td>{{ name.gender|title }}</th>
+            <td>{{ name.next_of_kin|title }}</td>
+            <td>{{ name.contact }}</td>
+            <td>{{ name.age }}</td>
+            <td>{{ name.status|title }}</td>
+        </tr>
+        {% endfor %}
+   </tbody>
+</table>
+
+{% endblock %}

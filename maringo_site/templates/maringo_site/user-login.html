@@ -1,0 +1,25 @@
+{% extends 'maringo_site/index.html' %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<div class="container-sm col-md-6 rounded-lg p-3  my-3 bg-dark text-white">
+
+    <form method="post" autocomplete="off" action="{% url 'maringo_site:member_register' %}">
+       
+        {% csrf_token %}
+    
+        <div class="form-group">
+    
+        {{ form|crispy }}
+    
+        </div>
+    <input class="btn btn-secondary" type="submit" value="Login">
+    
+    </form>
+    </div>
+
+
+{% endblock %}

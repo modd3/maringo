@@ -1,0 +1,10 @@
+.forms{ 
+    background: linear-gradient(90, #B5C0D0, #EED3D9);
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    padding: 0.2rem 1rem;
+    text-decoration: none;
+    color: black;
+    white-space: wrap;
+}
