@@ -1,5 +1,3 @@
-from email.policy import default
-from tkinter import Widget
 from django.db import models
 #from networkx import constraint
 
